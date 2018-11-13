@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.h1 {
+    text-align: center;
+}
+
+/* body {
+    background-image: url("assets/generic-landscape-slider.jpg");
+} */
+
+#main-container {
+    background-color: lightgray;
+}
+
+* {
+    font-family: 'Poor Story', cursive;
+}
