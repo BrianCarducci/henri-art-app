@@ -12,4 +12,14 @@ export class FunctionalComponent implements OnInit {
   ngOnInit() {
   }
 
+  imgClick() {
+    let modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+  }
+
+  closeModal() {
+    let modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+  }
+ 
 }

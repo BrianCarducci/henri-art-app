@@ -1,3 +1,47 @@
-<p>
-  functional works!
-</p>
+<div class="row">
+  <h3 class="center">Functional Artwork</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_2855.JPG" class="center">
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_2856.JPG">
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_2862.JPG">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_3494.JPG" class="center">
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_3506.JPG">
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_3555.JPG">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_3594.JPG" class="center">
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_3601.JPG">
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick()" src="assets/IMG_3674.JPG">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span (click)="closeModal()" class="close">&times;</span>
+  <img class="modal-content" id="img01" src="assets/IMG_2855.JPG">
+  <div id="caption">
+    <label>Caption</label>
+  </div>
+</div>
