@@ -2,4 +2,60 @@
   <h3 style="text-align:center;">Functional Artwork</h3>
 </div>
 
-<p class="center">Coming Soon!</p>
+<div class="row">
+  <h5 class="center">All of the items below are for sale! Prices vary so 
+    reach out to me if any of my artwork peaks your interest and we can go from there.</h5>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2595.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2596.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2597.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+</div>
+
+ <div class="row">
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2598.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2599.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2600.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2780.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2790.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+  <div class="col-md-4">
+    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2797.JPG" class="center thumb">
+    <label>text</label>
+  </div>
+</div>
+
+<div id="myModal" class="modal" (click)="closeModal()">
+  <span (click)="closeModal()" class="close">&times;</span>
+  <img class="modal-content" id="modal_img" src={{img}}>
+  <div id="caption">
+    <label id="modal_caption">{{modalCaption}}</label>
+  </div>
+</div>
