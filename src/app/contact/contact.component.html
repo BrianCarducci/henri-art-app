@@ -5,7 +5,7 @@
 </div>
 
 <div class="row">
-  <label class="center" style="padding-bottom: 10px; text-align: center;">Reach out regarding anything at all! Whether it be about purchasing any of my art, 
+  <label class="center" style="padding-bottom: 10px; text-align: center;">Reach out regarding anything at all. Whether it be about purchasing any of my art, 
     potential job offerings, or general questions, anything is fair game.
   </label>
 </div>
@@ -19,7 +19,25 @@
     
 </div>
 
-<embed src="assets/resume.pdf" type="application/pdf" width="100%" height="1175px" />
+<div *ngIf="!mobile">
+    <embed src="assets/resume.pdf" type="application/pdf" width="100%" height="1175px" />
+</div>
+
+<div *ngIf="mobile">
+        <div class="row">
+                <div class="col-xs-12">
+                    <span class="glyphicon glyphicon-map-marker"></span><i> Mashiko, Tochigi-Japan</i>
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="glyphicon glyphicon-envelope"></span><i> hjroque1@gmail.com</i>
+                </div>
+            </div>
+    <label>My Resume: </label><a href="assets/resume.pdf" target="_blank"> resume.pdf</a>
+    
+</div>
+
 
 <!-- <object width="100%" height="1175px" data="assets/resume.pdf"></object> -->
 

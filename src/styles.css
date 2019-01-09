@@ -24,3 +24,10 @@ html {
 .loading {
     background: transparent url('http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif') center no-repeat;
   }
+
+  .paper {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #FFFFCC;
+    box-shadow: 5px 10px 5px #888888;
+}

@@ -1,5 +1,5 @@
 <div class="row">
-  <h3 style="text-align:center;">Functional Artwork</h3>
+  <h2 style="text-align:center;">Functional Artwork</h2>
 </div>
 
 <div class="row">
@@ -21,6 +21,21 @@
     <label></label>
   </div>
 </div>
+
+<div class="row">
+    <div class="col-md-4">
+      <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2780.JPG" class="center thumb">
+      <label></label>
+    </div>
+    <div class="col-md-4">
+      <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2790.JPG" class="center thumb">
+      <label></label>
+    </div>
+    <div class="col-md-4">
+      <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2797.JPG" class="center thumb">
+      <label></label>
+    </div>
+  </div>
 
 <div class="row">
   <div class="col-md-4">
@@ -52,20 +67,7 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2780.JPG" class="center thumb">
-    <label>text</label>
-  </div>
-  <div class="col-md-4">
-    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2790.JPG" class="center thumb">
-    <label></label>
-  </div>
-  <div class="col-md-4">
-    <img (click)="imgClick($event)" src="assets/functional/thumbnails/IMG_2797.JPG" class="center thumb">
-    <label></label>
-  </div>
-</div>
+
 
 <div id="myModal" class="modal" (click)="closeModal()">
   <span (click)="closeModal()" class="close">&times;</span>
