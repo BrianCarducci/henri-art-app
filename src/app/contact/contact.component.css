@@ -1,4 +1,4 @@
-h1 {
+h3 {
     text-align: center;
 }
 
@@ -26,6 +26,7 @@ textarea {
 }
 
 img {
+    margin: 0 auto;
     height: 29px;
     width: 29px;
 }
@@ -41,4 +42,14 @@ a :hover {
 
 button {
     margin-bottom: 10px;
+}
+
+.icon-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
