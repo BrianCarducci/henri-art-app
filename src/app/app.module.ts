@@ -8,6 +8,7 @@ import { FunctionalComponent } from './functional/functional.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { ContactComponent } from './contact/contact.component';
 import { SculpturalComponent } from './sculptural/sculptural.component';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SculpturalComponent } from './sculptural/sculptural.component';
     MaincontentComponent,
     FunctionalComponent,
     ContactComponent,
-    SculpturalComponent
+    SculpturalComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
