@@ -15,23 +15,23 @@ export class SculpturalComponent implements OnInit {
   }
 
   imgClick(event) {
-    let imgSrc = event.target.getAttribute('src');
-    imgSrc = imgSrc.split('/');
-    imgSrc[2] = 'fullsize';
-    imgSrc = imgSrc.join('/');
-    this.img = imgSrc;
-    console.log(this.img);
+    // let imgSrc = event.target.getAttribute('src');
+    // imgSrc = imgSrc.split('/');
+    // imgSrc[2] = 'fullsize';
+    // imgSrc = imgSrc.join('/');
+    // this.img = imgSrc;
+    // console.log(this.img);
   
-    switch(this.img) {
-      case 'assets/IMG_2855.JPG':
-        this.modalCaption = 'testyz';
-        break;
-      default:
-        this.modalCaption = 'idk';
-    }
-    let modal = document.getElementById('myModal');
-    let modalImg = document.getElementById('modal_image');
-    modal.style.display = 'block';
+    // switch(this.img) {
+    //   case 'assets/IMG_2855.JPG':
+    //     this.modalCaption = 'testyz';
+    //     break;
+    //   default:
+    //     this.modalCaption = 'idk';
+    // }
+    // let modal = document.getElementById('myModal');
+    // let modalImg = document.getElementById('modal_image');
+    // modal.style.display = 'block';
   }
 
   closeModal() {

@@ -15,21 +15,21 @@ export class FunctionalComponent implements OnInit {
   }
 
   imgClick(event) {
-    let imgSrc = event.target.getAttribute('src');
-    // imgSrc = imgSrc.split('/');
-    // imgSrc[2] = 'fullsize';
-    // imgSrc = imgSrc.join('/');
-    this.img = imgSrc;
-    // switch(this.img) {
-    //   case 'assets/IMG_2855.JPG':
-    //     this.modalCaption = 'testyz';
-    //     break;
-    //   default:
-    //     this.modalCaption = 'idk';
-    // }
-    let modal = document.getElementById('myModal');
-    // let modalImg = document.getElementById('modal_image');
-    modal.style.display = 'block';
+    // let imgSrc = event.target.getAttribute('src');
+    // // imgSrc = imgSrc.split('/');
+    // // imgSrc[2] = 'fullsize';
+    // // imgSrc = imgSrc.join('/');
+    // this.img = imgSrc;
+    // // switch(this.img) {
+    // //   case 'assets/IMG_2855.JPG':
+    // //     this.modalCaption = 'testyz';
+    // //     break;
+    // //   default:
+    // //     this.modalCaption = 'idk';
+    // // }
+    // let modal = document.getElementById('myModal');
+    // // let modalImg = document.getElementById('modal_image');
+    // modal.style.display = 'block';
   }
 
   closeModal() {
