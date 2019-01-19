@@ -9,6 +9,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { ContactComponent } from './contact/contact.component';
 import { SculpturalComponent } from './sculptural/sculptural.component';
 import { CvComponent } from './cv/cv.component';
+import { MusicComponent } from './music/music.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CvComponent } from './cv/cv.component';
     FunctionalComponent,
     ContactComponent,
     SculpturalComponent,
-    CvComponent
+    CvComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
