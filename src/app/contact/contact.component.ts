@@ -15,7 +15,6 @@ export class ContactComponent implements OnInit {
     if (window.screen.width <= 414) { // 768px portrait
       this.mobile = true;
     }
-    console.log(this.mobile);
   }
 
 }
