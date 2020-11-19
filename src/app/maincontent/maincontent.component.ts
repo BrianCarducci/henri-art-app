@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/storage';
+
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-maincontent',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaincontentComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  profileUrl: Observable<string | null>;
+  constructor(private storage: AngularFireStorage) {
+    const ref = this.storage.ref('self_portrait.jpg');
+    this.profileUrl = ref.getDownloadURL();
   }
+
+  ngOnInit() { }
 
 }
