@@ -32,14 +32,14 @@
     </div>
 
     <div *ngIf="mobile">
-        <div class="dropdown">
+        <div class="dropdown" style="text-align: center;">
             <span class="glyphicon glyphicon-menu-hamburger" (click)="openNav()"></span>
-            <div id="myDropdown" class="dropdown-content fade-in">
+            <div id="myDropdown" class="dropdown-content center fade-in">
                 <a routerLink="" (click)="closeNav()">Bio</a>
                 <a routerLink="/sculptural" (click)="closeNav()">Sculptural</a>
                 <a routerLink="/functional" (click)="closeNav()">Functional</a>
                 <a routerLink="/paintings" (click)="closeNav()">Paintings</a>
-                <a routerLink="/functional" (click)="closeNav()">Music</a>
+                <a routerLink="/music" (click)="closeNav()">Music</a>
                 <a routerLink="/contact" (click)="closeNav()">Contact Me</a>
                 <a routerLink="/cv" (click)="closeNav()">Resume</a>
             </div>
