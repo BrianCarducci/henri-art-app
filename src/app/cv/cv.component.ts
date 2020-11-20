@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/storage';
+
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cv',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent implements OnInit {
-
-  constructor() { }
+  afterLoadComplete = false;
+  mobile = false;
+  resumeUrl$: Observable<string | null>;
+  constructor(private storage: AngularFireStorage) { }
 
   ngOnInit() {
+    if (window.screen.width <= 414) { // 768px portrait
+      this.mobile = true;
+    }
+    const ref = this.storage.ref('resume.pdf');
+    this.resumeUrl$ = ref.getDownloadURL();
+  }
+
+  pdfLoaded() {
+    this.afterLoadComplete = true;
   }
 
 }

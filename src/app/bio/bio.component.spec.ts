@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { MaincontentComponent } from './maincontent.component';
+import { BioComponent } from './bio.component';
 
-describe('MaincontentComponent', () => {
-  let component: MaincontentComponent;
+describe('BioComponent', () => {
+  let component: BioComponent;
   let fixture: ComponentFixture<MaincontentComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MaincontentComponent ]
+      declarations: [BioComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MaincontentComponent);
+    fixture = TestBed.createComponent(BioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -5,31 +5,30 @@
 </div>
 
 <div class="row">
-  <label class="center" style="padding-bottom: 10px; text-align: center;">Reach out regarding anything at all, whether it be about purchasing any of my work, 
-    commissions, or general questions.
-  </label>
+    <label class="center" style="padding-bottom: 10px; text-align: center;">Reach out regarding anything at all, whether
+        it be about purchasing any of my work,
+        commissions, or general questions.
+    </label>
 </div>
 
 <div class="row">
-    <div class="col-xs-12 center">
-        <a href="https://www.instagram.com/onreeeeeee/"><img class="socialmedia" src="../../assets/insta.png" style="margin-bottom:5px;"></a>
-        <a href="https://www.instagram.com/onreeeeeee/"><label class="link" style="margin-left: 5px;">@onreeeeeee</label></a>
+    <div style="text-align: center;">
+        <label>Instagram: </label>
+        <a href="https://www.instagram.com/onreeeeeee/"><label class="link"
+                style="margin-left: 5px;">@onreeeeeee</label></a>
     </div>
 </div>
-
 <div class="row">
-    <div class="col-xs-12">
-        <span class="glyphicon glyphicon-map-marker"></span><i> Mashiko, Tochigi-Japan</i>
-    </div>   
-</div>
-<div class="row">
-    <div class="col-xs-12">
+    <div style="text-align: center;">
         <span class="glyphicon glyphicon-envelope"></span><i> hjroque1@gmail.com</i>
     </div>
 </div>
-
-
-<div *ngIf="mobile">
-    <label>My Resume: </label><a href="assets/resume.pdf" target="_blank"> resume.pdf</a>
+<div class="row">
+    <div style="text-align: center;">
+        <span class="glyphicon glyphicon-map-marker"></span><i> Mashiko, Tochigi-Japan</i>
+    </div>
 </div>
 
+<div *ngIf="mobile" style="text-align: center;">
+    <a [href]="resumeUrl$ | async" target="_blank">resume.pdf</a>
+</div>

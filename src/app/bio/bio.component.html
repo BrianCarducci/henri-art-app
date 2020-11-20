@@ -1,0 +1,36 @@
+<div *ngIf="imgLoaded; else loading">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="paper center shadow fade-in">
+        <p>
+          "Memories are the unseen baggage we tote around day by day. We us them to mold ourselves, and create our
+          identities. Our subconscious stores these memories, and morphs them into our imaginations. Every object on
+          this
+          earth has its own form of memory. From the bottoms of stools to a wood furnace, there is an unspoken storage
+          of
+          information that lies within each material. Ceramics have one of the most powerful forms of memory. Like a bug
+          in amber it has the ability to trap actions, and preserve precise movements. Because of this quality I am
+          attracted to the medium. Similar to writing diary entries I exploit the memory of ceramics to capture my
+          stories. By using this structural form I turn the vessel into a book, and create paragraphs out of actions.
+          From
+          strong agressive gestures to soft minuet details these pieces hold my sentiments of frustration, grief,
+          isolation and glee. The storage of information is crucial, especially as we progress through life and our
+          memories fade. Like a book or a picture I use the vessel to preserve my human condition while through touch I
+          express my emotions."
+        </p>
+        <b>- Henri Roque</b>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <img [src]="profilePicUrl$ | async" style='display: none' onload="this.style.display = 'block'" (load)="loaded()"
+      class="shadow fade-in">
+  </div>
+
+</div>
+
+<ng-template #loading>
+  <mat-spinner class="center" style="margin-top: 25%; margin-bottom: 50%;"></mat-spinner>
+</ng-template>

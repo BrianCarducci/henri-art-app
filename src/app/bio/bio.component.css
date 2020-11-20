@@ -1,0 +1,22 @@
+h1, h2, h3, h4, label {
+    text-align: center;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #3fb53f;
+}
+
+img {
+    margin-bottom: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    padding: 10px;
+    font-size: 18px;
+}
+
+b {
+    padding: 10px;
+}
