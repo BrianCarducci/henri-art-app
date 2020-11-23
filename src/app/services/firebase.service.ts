@@ -9,7 +9,7 @@ import { map, mergeMap, switchMap } from 'rxjs/operators';
 export class FirebaseService {
   constructor(private storage: AngularFireStorage) { }
 
-  getArtImgFilesUrlsObservables(topic: string) {
+  getArtImgFilesUrls(topic: string) {
     return this.storage.ref(topic).listAll().pipe(
       map(folders => folders.prefixes),
       map(prefixArrays => prefixArrays.map(prefix => prefix.listAll().then(listResult => listResult.items[0].getDownloadURL().then(res => res)))),

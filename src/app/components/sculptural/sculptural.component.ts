@@ -6,19 +6,14 @@ import { FirebaseService } from '../../services/firebase.service';
   templateUrl: './sculptural.component.html',
   styleUrls: ['./sculptural.component.css']
 })
-export class SculpturalComponent implements OnInit, AfterViewInit {
-  @ViewChild('spinner') spinners;
+export class SculpturalComponent implements OnInit {
   imgUrls: string[]
   imgLoadCount = 0
   constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit() {
-    this.firebaseService.getArtImgFilesUrlsObservables('Sculptural')
+    this.firebaseService.getArtImgFilesUrls('Sculptural')
       .subscribe(res => Promise.all(res).then(urls => this.imgUrls = urls));
-  }
-
-  ngAfterViewInit() {
-    console.log(this.spinners)
   }
 
   imgLoaded(spinnerIndex: number) {
