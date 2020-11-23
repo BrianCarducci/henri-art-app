@@ -9,16 +9,16 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { BioComponent } from './bio/bio.component';
-import { FunctionalComponent } from './functional/functional.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BioComponent } from './components/bio/bio.component';
+import { FunctionalComponent } from './components/functional/functional.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ContactComponent } from './contact/contact.component';
-import { SculpturalComponent } from './sculptural/sculptural.component';
-import { CvComponent } from './cv/cv.component';
-import { MusicComponent } from './music/music.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { SculpturalComponent } from './components/sculptural/sculptural.component';
+import { CvComponent } from './components/cv/cv.component';
+import { MusicComponent } from './components/music/music.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PaintingsComponent } from './paintings/paintings.component';
+import { PaintingsComponent } from './components/paintings/paintings.component';
 
 @NgModule({
   declarations: [

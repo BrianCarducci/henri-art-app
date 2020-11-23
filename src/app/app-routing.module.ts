@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
-import { FunctionalComponent } from './functional/functional.component';
-import { BioComponent } from './bio/bio.component';
-import { ContactComponent } from './contact/contact.component';
-import { SculpturalComponent } from './sculptural/sculptural.component';
-import { CvComponent } from './cv/cv.component';
-import { MusicComponent } from './music/music.component';
-import { PaintingsComponent } from './paintings/paintings.component';
+import { FunctionalComponent } from './components/functional/functional.component';
+import { BioComponent } from './components/bio/bio.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { SculpturalComponent } from './components/sculptural/sculptural.component';
+import { CvComponent } from './components/cv/cv.component';
+import { MusicComponent } from './components/music/music.component';
+import { PaintingsComponent } from './components/paintings/paintings.component';
 
 const routes: Routes = [
   { path: '', component: BioComponent },
