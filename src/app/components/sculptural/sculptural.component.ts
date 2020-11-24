@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
@@ -6,14 +7,21 @@ import { FirebaseService } from '../../services/firebase.service';
   templateUrl: './sculptural.component.html',
   styleUrls: ['./sculptural.component.css']
 })
-export class SculpturalComponent implements OnInit {
-  imgUrls: string[]
-  imgLoadCount = 0
+export class SculpturalComponent implements OnInit, OnDestroy {
+
+  imgUrlsSubscription: Subscription;
+  imgUrls: string[];
+  imgLoadCount = 0;
+
   constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit() {
-    this.firebaseService.getArtImgFilesUrls('Sculptural')
+    this.imgUrlsSubscription = this.firebaseService.getArtImgFilesUrls('Sculptural')
       .subscribe(res => Promise.all(res).then(urls => this.imgUrls = urls));
+  }
+
+  ngOnDestroy() {
+    this.imgUrlsSubscription.unsubscribe();
   }
 
   imgLoaded(spinnerIndex: number) {
