@@ -12,13 +12,12 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if (window.screen.width <= 414) { // 768px portrait
-      this.mobile = true;
-    }
+    this.mobile = window.screen.width <= 414 // 768px portrait
   }
 
   openNav() {
     document.getElementById("myDropdown").classList.toggle("show");
+    console.log('open called')
   }
 
   closeNav() {

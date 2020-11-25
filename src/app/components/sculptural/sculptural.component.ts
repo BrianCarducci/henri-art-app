@@ -11,11 +11,12 @@ export class SculpturalComponent implements OnInit, OnDestroy {
 
   imgUrlsSubscription: Subscription;
   imgUrls: string[];
-  imgLoadCount = 0;
+  mobile = false;
 
   constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit() {
+    this.mobile = window.screen.width <= 414 // 768px portrait
     this.imgUrlsSubscription = this.firebaseService.getArtImgFilesUrls('Sculptural')
       .subscribe(res => Promise.all(res).then(urls => this.imgUrls = urls));
   }

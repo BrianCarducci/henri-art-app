@@ -11,6 +11,9 @@
     </label>
 </div>
 
+<div *ngIf="mobile" style="text-align: center;">
+    <label>Resume:</label><a [href]="resumeUrl$ | async" target="_blank"> resume.pdf</a>
+</div>
 <div class="row">
     <div style="text-align: center;">
         <label>Instagram: </label>
@@ -27,8 +30,4 @@
     <div style="text-align: center;">
         <span class="glyphicon glyphicon-map-marker"></span><i> Mashiko, Tochigi-Japan</i>
     </div>
-</div>
-
-<div *ngIf="mobile" style="text-align: center;">
-    <a [href]="resumeUrl$ | async" target="_blank">resume.pdf</a>
 </div>

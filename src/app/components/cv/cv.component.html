@@ -1,7 +1,8 @@
 <h2 style="text-align:center">My Resume</h2>
 
 <div style="text-align: center;">
-    <a [href]="resumeUrl$ | async" target="_blank">resume.pdf</a>
+    <label>Click this link to open/download my resume: </label>
+    <a [href]="resumeUrl$ | async" target="_blank"> resume.pdf</a>
 </div>
 
 <div *ngIf="!mobile">

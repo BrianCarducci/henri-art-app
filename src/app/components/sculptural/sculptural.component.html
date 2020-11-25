@@ -8,10 +8,12 @@
     see my art.</h4>
 </div>
 
-<div *ngFor="let imgUrl of imgUrls; let index = index">
-  <div class="col-md-4 col-xs-12">
-    <mat-spinner id="{{ index }}"></mat-spinner>
-    <img src="{{ imgUrl }}" style='display: none' onload="this.style.display = 'block'" (load)="imgLoaded(index)"
-      class="fade-in">
+<div class="grid">
+  <div *ngFor="let imgUrl of imgUrls; let index = index">
+    <div class="card">
+      <mat-spinner id="{{ index }}" class="center"></mat-spinner>
+      <img src="{{ imgUrl }}" style='display: none' onload="this.style.display = 'block'" (load)="imgLoaded(index)"
+        class="fade-in shadow">
+    </div>
   </div>
 </div>
