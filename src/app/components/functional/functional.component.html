@@ -7,3 +7,13 @@
       href="https://www.instagram.com/onreeeeeee/">@onreeeeeee</a> to
     see my art.</h4>
 </div>
+
+<div class="grid">
+  <div *ngFor="let imgUrl of imgUrls; let index = index">
+    <div class="card">
+      <mat-spinner id="{{ index }}" class="center"></mat-spinner>
+      <img src="{{ imgUrl }}" style='display: none' onload="this.style.display = 'block'" (load)="imgLoaded(index)"
+        class="fade-in shadow">
+    </div>
+  </div>
+</div>

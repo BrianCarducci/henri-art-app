@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-functional',
@@ -6,35 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./functional.component.css']
 })
 export class FunctionalComponent implements OnInit {
-  img = '';
-  modalCaption = '';
+  imgUrlsSubscription: Subscription;
+  imgUrls: string[];
+  mobile = false;
 
-  constructor() { }
+  constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit() {
+    this.mobile = window.screen.width <= 414 // 768px portrait
+    this.imgUrlsSubscription = this.firebaseService.getArtImgFilesUrls('Functional')
+      .subscribe(res => Promise.all(res).then(urls => this.imgUrls = urls));
   }
 
-  imgClick(event) {
-    // let imgSrc = event.target.getAttribute('src');
-    // // imgSrc = imgSrc.split('/');
-    // // imgSrc[2] = 'fullsize';
-    // // imgSrc = imgSrc.join('/');
-    // this.img = imgSrc;
-    // // switch(this.img) {
-    // //   case 'assets/IMG_2855.JPG':
-    // //     this.modalCaption = 'testyz';
-    // //     break;
-    // //   default:
-    // //     this.modalCaption = 'idk';
-    // // }
-    // let modal = document.getElementById('myModal');
-    // // let modalImg = document.getElementById('modal_image');
-    // modal.style.display = 'block';
+  ngOnDestroy() {
+    this.imgUrlsSubscription.unsubscribe();
   }
 
-  closeModal() {
-    let modal = document.getElementById('myModal');
-    modal.style.display = 'none';
+  imgLoaded(spinnerIndex: number) {
+    document.getElementById(`${spinnerIndex}`).style.display = 'none';
   }
- 
+
 }

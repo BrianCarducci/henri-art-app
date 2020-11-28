@@ -8,7 +8,6 @@ import { FirebaseService } from '../../services/firebase.service';
   styleUrls: ['./sculptural.component.css']
 })
 export class SculpturalComponent implements OnInit, OnDestroy {
-
   imgUrlsSubscription: Subscription;
   imgUrls: string[];
   mobile = false;

@@ -8,25 +8,25 @@
     <div *ngIf="!mobile">
         <ul class="nav-bar">
             <nav>
-                <li><a routerLink="">Bio</a></li>
+                <li><a routerLink="sculptural">Sculptural</a></li>
             </nav>
             <nav>
-                <li><a routerLink="/sculptural">Sculptural</a></li>
+                <li><a routerLink="functional">Functional</a></li>
             </nav>
             <nav>
-                <li><a routerLink="/functional">Functional</a></li>
-            </nav>
-            <nav>
-                <li><a routerLink="/paintings">Paintings</a></li>
+                <li><a routerLink="paintings">Paintings</a></li>
             </nav>
             <nav>
                 <li><a routerLink="music">Music</a></li>
             </nav>
             <nav>
-                <li><a routerLink="/contact">Contact</a></li>
+                <li><a routerLink="bio">Bio</a></li>
             </nav>
             <nav>
-                <li><a routerLink="/cv">Resume</a></li>
+                <li><a routerLink="contact">Contact</a></li>
+            </nav>
+            <nav>
+                <li><a routerLink="cv">Resume</a></li>
             </nav>
         </ul>
     </div>
@@ -35,13 +35,13 @@
         <div class="dropdown" style="text-align: center;">
             <span class="glyphicon glyphicon-menu-hamburger" (click)="openNav()"></span>
             <div id="myDropdown" class="dropdown-content center fade-in">
-                <a routerLink="" (click)="closeNav()">Bio</a>
-                <a routerLink="/sculptural" (click)="closeNav()">Sculptural</a>
-                <a routerLink="/functional" (click)="closeNav()">Functional</a>
-                <a routerLink="/paintings" (click)="closeNav()">Paintings</a>
-                <a routerLink="/music" (click)="closeNav()">Music</a>
-                <a routerLink="/contact" (click)="closeNav()">Contact Me</a>
-                <a routerLink="/cv" (click)="closeNav()">Resume</a>
+                <a routerLink="sculptural" (click)="closeNav()">Sculptural</a>
+                <a routerLink="functional" (click)="closeNav()">Functional</a>
+                <a routerLink="paintings" (click)="closeNav()">Paintings</a>
+                <a routerLink="music" (click)="closeNav()">Music</a>
+                <a routerLink="bio" (click)="closeNav()">Bio</a>
+                <a routerLink="contact" (click)="closeNav()">Contact Me</a>
+                <a routerLink="cv" (click)="closeNav()">Resume</a>
             </div>
         </div>
 

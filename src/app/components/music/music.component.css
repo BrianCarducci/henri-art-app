@@ -1,0 +1,23 @@
+iframe {
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 2rem;
+  }
+    
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    column-gap: 2rem;
+    }
+}
