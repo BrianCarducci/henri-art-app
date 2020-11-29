@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/storage';
-
 import { Observable } from 'rxjs';
+import { FirebaseService } from '../../services/firebase.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,14 +11,13 @@ export class ContactComponent implements OnInit {
   mobile = false;
   resumeUrl$: Observable<string | null>;
 
-  constructor(private storage: AngularFireStorage) { }
+  constructor(private firebaseService: FirebaseService) { }
 
   ngOnInit() {
     if (window.screen.width <= 414) { // 768px portrait
       this.mobile = true;
     }
-    const ref = this.storage.ref('resume.pdf');
-    this.resumeUrl$ = ref.getDownloadURL();
+    this.resumeUrl$ = this.firebaseService.getSingleFile('resume.pdf');
   }
 
 }

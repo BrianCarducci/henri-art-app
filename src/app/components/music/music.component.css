@@ -2,11 +2,6 @@ iframe {
     margin-bottom: 10px;
 }
 
-h4 {
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
 .grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
