@@ -4,13 +4,6 @@
     </h2>
 </div>
 
-<div class="row">
-    <label class="center" style="padding-bottom: 10px; text-align: center;">Reach out regarding anything at all, whether
-        it be about purchasing any of my work,
-        commissions, or general questions.
-    </label>
-</div>
-
 <div *ngIf="mobile" style="text-align: center;">
     <label>Resume:</label><a [href]="resumeUrl$ | async" target="_blank"> resume.pdf</a>
 </div>
@@ -26,8 +19,19 @@
         <span class="glyphicon glyphicon-envelope"></span><a href="mailto:hjroque1@gmail.com"> hjroque1@gmail.com</a>
     </div>
 </div>
-<div class="row">
+<div class="row" [ngStyle]="{'margin-bottom':mobile ? '20px' : '0px'}">
     <div style="text-align: center;">
         <span class="glyphicon glyphicon-map-marker"></span><i> Mashiko, Tochigi-Japan</i>
     </div>
+</div>
+
+<div *ngIf="!mobile">
+    <div style="text-align: center;">
+        <label>Click this link to open/download my resume: </label>
+        <a [href]="resumeUrl$ | async" target="_blank"> resume.pdf</a>
+    </div>
+    <mat-spinner *ngIf="!afterLoadComplete" class="center" style="margin-top: 10%; margin-bottom: 50%;"></mat-spinner>
+    <pdf-viewer #pdfViewer (after-load-complete)="pdfLoaded()" [src]="resumeUrl$ | async" [render-text]="true"
+        class="fade-in">
+    </pdf-viewer>
 </div>

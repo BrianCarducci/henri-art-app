@@ -8,6 +8,7 @@ import { FirebaseService } from '../../services/firebase.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  afterLoadComplete = false;
   mobile = false;
   resumeUrl$: Observable<string | null>;
 
@@ -18,6 +19,10 @@ export class ContactComponent implements OnInit {
       this.mobile = true;
     }
     this.resumeUrl$ = this.firebaseService.getSingleFile('resume.pdf');
+  }
+
+  pdfLoaded() {
+    this.afterLoadComplete = true;
   }
 
 }

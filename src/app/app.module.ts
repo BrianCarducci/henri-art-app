@@ -15,7 +15,6 @@ import { FunctionalComponent } from './components/functional/functional.componen
 import { AppRoutingModule } from './app-routing.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { SculpturalComponent } from './components/sculptural/sculptural.component';
-import { CvComponent } from './components/cv/cv.component';
 import { MusicComponent } from './components/music/music.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaintingsComponent } from './components/paintings/paintings.component';
@@ -28,7 +27,6 @@ import { PaintingsComponent } from './components/paintings/paintings.component';
     FunctionalComponent,
     ContactComponent,
     SculpturalComponent,
-    CvComponent,
     MusicComponent,
     PaintingsComponent
   ],

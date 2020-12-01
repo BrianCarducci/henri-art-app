@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
 
   openNav() {
     document.getElementById("myDropdown").classList.toggle("show");
-    console.log('open called')
   }
 
   closeNav() {

@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-.h1 {
+h1, h2, h3, h4 {
     text-align: center;
 }
 
@@ -17,8 +17,10 @@ a {
     color: #9a64ff;
 }
 
-.loading {
-    background: transparent url('http://thinkfuture.com/wp-content/uploads/2013/10/loading_spinner.gif') center no-repeat;
+img {
+    margin-bottom: 15px;
+    width: 100%;
+    border: 5px solid white;
   }
 
 .paper {
@@ -39,7 +41,6 @@ a {
     box-shadow: 5px 10px 5px #888888;
 }
 
-html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .fade-in {
